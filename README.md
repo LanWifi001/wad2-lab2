@@ -21,15 +21,13 @@ A personal portfolio website built with the Laravel framework. This project show
 
 *A detailed look at my background and aspirations.*
 
-> **Biography:** [Brief text about your history and interests]
-> **Skills:** [List of technologies and soft skills]
+> ![Main Portfolio Page](SS/ss2.png)
 
 #### **Sub-Page: My First Project**
 
 *A spotlight on my initial technical milestone.*
 
-> **Project Title:** [Name of your first project]
-> **Description:** [A short summary of what the project does and the tech stack used.]
+> ![Main Portfolio Page](SS/ss3.png)
 
 ---
 
