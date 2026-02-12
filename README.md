@@ -15,7 +15,7 @@ A personal portfolio website built with the Laravel framework. This project show
 > **Leander Dylan Broñola**
 > **BS Information Systems**
 > *Welcome to my digital space where I showcase my journey and skills.*
-> ![Main Portfolio Page](SS/ss1.jpg)
+> ![Main Portfolio Page](SS/ss1.png)
 
 #### **Sub-Page: About Me**
 
