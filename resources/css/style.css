@@ -1,0 +1,338 @@
+@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+
+/* GENERAL STYLES */
+:root {
+  /* Core Colors - A cleaner, soft-white palette */
+  --bg-main: #ffffff;
+  --bg-card: #f8fafc;
+  --bg-card-hover: #f1f5f9;
+
+  /* Typography - High contrast for readability, no neon */
+  /* A deep, "near-black" for sharp contrast */
+  --text-bright: #121212; 
+
+  /* A medium-gray that looks like pencil or faded ink */
+  --text-muted: #737373; 
+
+  /* A clean, architectural gray for backgrounds or accents */
+  --accent-primary: #262626;
+
+  /* Minimalist Borders & Shadows - No more glows */
+  --border-subtle: 1px solid #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+
+  /* Font Variety */
+  --font-header: 'Caviar dreams', sans-serif; /* Elegant & Sophisticated */
+  --font-body: 'Inter', sans-serif;          /* Clean & Readable */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-bright);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 44rem;
+  height: 100vh;
+  background-color: var(--bg-card);
+}
+
+header img {
+  height: 100%;
+  /* width: 50rem; */
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.name {
+  font-family: var(--font-header);
+  font-size: 5rem;
+  letter-spacing: -0.04em;
+  color: var(--text-bright);
+}
+
+.name .description {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Added for variety: Subtitles or Menu items */
+.nav-link, .label {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.15em; /* Spaced out caps for a minimalist look */
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.logo {
+  padding: 2px;
+  background-color: var(--accent-primary);
+}
+
+.scroll-container {
+  margin-top: 4rem;
+  width: 100%;
+  background-color: var(--accent-primary);
+  position: relative;
+  left: -100%;
+}
+
+.scroll {
+  font-family: var(--font-body);
+  font-size: 2.4rem;
+  color: var(--bg-card);
+  background-color: var(--accent-primary);
+  width: max-content;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite; /* Adjust '20s' for speed */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Moves exactly half the track width */
+  }
+}
+
+.container {
+  align-self: self-end;
+}
+
+main {
+  background-color: var(--bg-card);
+}
+
+.more {
+  position: fixed;
+  top: 20px;
+  right: 60px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  color: var(--bg-card);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.more:hover {
+  scale: 1.2;
+}
+
+.container-hidden {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-muted);
+  transition: right 0.5s ease-in-out;
+}
+
+.show-hidden {
+  right: 0;
+}
+
+.reveal {
+  opacity: 0;
+  scale: 1.4;
+  transform: translateY(-20px) translateX(-20px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+  scale: 1;
+}
+
+.active2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.show {
+  transform: translateX(-100%);
+}
+
+.atag {
+  color: var(--bg-card);
+  text-decoration: none;
+  font-size: 4rem;
+  margin-left: 4.8rem;
+  font-family: var(--font-body);
+  transition: all 0.3s ease-in-out;
+  display: grid;
+  padding: 4px;
+}
+
+.atag:hover {
+  transform: translateX(8px);
+}
+
+.tag {
+  align-items: center;
+}
+
+.desc {
+  font-family: var(--font-header);
+  font-size: 6rem;
+  color: var(--bg-card);
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}
+
+.menu {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.show1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-rotate {
+  transform: rotate(45deg);
+}
+
+/* ABOUT STYLES and FIRST PROJECT STYLES */
+.about-main, .first-main {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.about-main .name, .first-main .name {
+  margin: 2px;
+  font-size: 8rem;
+}
+
+.about-intro {
+  /* padding: 2px; */
+  display: grid;
+  grid-template-columns: 50% 30rem;
+  gap: 2rem;
+  justify-content: left;
+  align-items: center;
+  text-align: justify;
+}
+
+.about-img {
+  width: 30rem;
+  justify-self: center;
+  align-self: center;
+  margin-left: 8rem;
+}
+
+.about-desc {
+  margin-left: 2rem;
+  align-self: top;
+}
+
+.pillars .name {
+  margin-top: 4rem;
+  font-size: 5rem;
+}
+
+.category {
+  font-family: var(--font-header);
+  font-size: 2.8rem;
+  margin: 2rem;
+  margin-top: 6rem;
+  background-color: var(--accent-primary);
+  color: var(--bg-card);
+  width: 40rem;
+  text-align: center;
+  justify-self: center;
+}
+
+.pillars .about-desc {
+  margin: 4rem;
+}
+
+.on {
+  background-color: var(--accent-primary);
+  width: 80%;
+}
+
+.category-desc {
+  display: grid;
+  grid-template-columns: 56% 30rem;
+  gap: 2rem;
+  justify-content: left;
+  align-items: center;
+  text-align: justify;
+}
+
+.category-desc .about-img {
+  margin-left: 0;
+}
+
+.cookeys {
+  width: 100%;
+  height: 30rem;
+  justify-self: center;
+}
+
+.project .name {
+  margin-top: 0;
+  font-size: 2.8rem;
+  align-self: top;
+  justify-self: left;
+}
+
+.project .desc {
+  font-size: 16px;
+  color: var(--text-bright);
+  font-family: var(--font-body);
+}
+
+.project {
+  gap: 2rem;
+  justify-content: left;
+  align-items: center;
+  text-align: justify;
+}
+
+.project article {
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  gap: 2rem;
+}
