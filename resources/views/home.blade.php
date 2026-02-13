@@ -45,7 +45,7 @@
         <div class="container-hidden">
             <div class="desc">Find out more about me.</div>
             <div class="menu">
-                <a href="home" class="atag on"><span class="tag">Home</span></a>
+                <a href="/" class="atag on"><span class="tag">Home</span></a>
                 <a href="about" class="atag"><span class="tag">About</span></a>
                 <a href="first" class="atag"><span class="tag">First Project</span></a>
             </div>
